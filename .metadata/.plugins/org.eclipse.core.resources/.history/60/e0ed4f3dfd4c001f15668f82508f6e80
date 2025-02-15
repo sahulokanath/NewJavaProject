@@ -1,0 +1,16 @@
+package Day9Polymerphsm;
+
+public class AdmMain {
+
+	public static void main(String[] args) {
+
+		Add obj = new Add();
+
+		obj.Add();
+		obj.Add(10.5, 20);
+		obj.Add(20, 60.5);
+		obj.Add(10, 30);
+		obj.Add(10, 20, 30);
+	}
+
+}

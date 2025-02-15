@@ -1,0 +1,28 @@
+package Drop_Down;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test1 {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		WebDriver driver = new ChromeDriver();
+
+		driver.manage().window().maximize();
+		driver.get("https://www.kreditbee.in/signin");
+
+		//driver.findElement(By.xpath("//button[@name=\"signin\"]")).click();
+
+		//boolean isdisply = driver.findElement(By.xpath("//button[@type='loanCardDetails']")).isDisplayed();
+		//System.out.println(isdisply);
+		//Thread.sleep(5000);
+		driver.findElement(By.className("skins__BackBtn-bYCcIb gIwHTt")).click();
+
+		Thread.sleep(5000);
+		driver.findElement(By.className("sc-btzYZH llkdXE")).sendKeys("8908064673");
+	}
+
+}

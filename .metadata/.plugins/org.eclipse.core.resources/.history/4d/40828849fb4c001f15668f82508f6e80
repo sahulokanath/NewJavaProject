@@ -1,0 +1,27 @@
+package Day9Polymerphsm;
+
+public class Add {
+	int a = 10;
+	int b = 20;
+
+	void Add() {
+		System.out.println(a + b);
+	}
+
+	void Add(int a, int b) {
+		System.out.println(a + b);
+	}
+
+	void Add(int a, double b) {
+		System.out.println(a + b);
+	}
+
+	void Add(double a, int b) {
+		System.out.println(a + b);
+	}
+
+	void Add(int a, int b, int c) {
+		System.out.println(a + b + c);
+	}
+
+}

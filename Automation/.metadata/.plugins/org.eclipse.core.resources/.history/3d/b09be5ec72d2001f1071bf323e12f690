@@ -1,0 +1,55 @@
+package testCase;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import pageObject.AccountReg;
+import pageObject.HomePage;
+
+public class TC001_Account_Reg {
+
+	WebDriver driver;
+	@BeforeClass
+	public void setup()
+	{
+		driver=new ChromeDriver();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		driver.get("https://tutorialsninja.com/demo/");
+		driver.manage().window().maximize();
+		
+	}
+	@AfterClass
+	public void tear()
+	{
+		driver.close();
+	}
+	
+	@Test
+	public void verify_acount_reg()
+	{
+		AccountReg acc =new AccountReg(driver);
+		acc.clickMyaccount();
+		acc.clickRegister();
+		
+		HomePage homepage=new HomePage(driver);
+		
+		homepage.setFirstname("lock");
+		homepage.setlastName("sahu");
+		homepage.setEmail("loka@gmail.com");
+		homepage.setTxtTelephone("8908064673");
+		homepage.setPassword("@4321@Lock");
+		homepage.settextConformPassword("@4321@Lock");
+		homepage.clickbutSubscribe();
+		homepage.clickbutPrivay();
+		homepage.clickbutContinue();
+		String conform = homepage.getConfimationMsg();
+		Assert.assertEquals(conform, "Your Account Has Been Created!");
+	}
+}

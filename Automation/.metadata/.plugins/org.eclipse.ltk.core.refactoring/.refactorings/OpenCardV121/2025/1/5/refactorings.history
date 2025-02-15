@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Master.xml&apos; to &apos;OpenCardV121&apos;&#x0A;- Original project: &apos;OpenCardV121&apos;&#x0A;- Destination element: &apos;OpenCardV121&apos;&#x0A;- Original element: &apos;Master.xml&apos;" description="Copy file" destination="=OpenCardV121" element1="Master.xml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1737994781255" units="0" version="1.0"/>
+</session>

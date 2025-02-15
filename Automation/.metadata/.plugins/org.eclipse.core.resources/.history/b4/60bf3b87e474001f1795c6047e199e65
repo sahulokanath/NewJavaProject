@@ -1,0 +1,18 @@
+package TESTNG;
+
+import org.testng.annotations.Test;
+
+/*
+Login
+Print The Logo
+Logout 
+ */
+public class Test {
+
+	
+	@Test(priority=1)
+	void login()
+	{
+		
+	}
+}

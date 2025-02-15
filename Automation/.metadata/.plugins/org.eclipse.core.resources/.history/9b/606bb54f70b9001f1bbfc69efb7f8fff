@@ -1,0 +1,29 @@
+package DataDrivenTesting;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class Excle1 {
+
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+
+		FileInputStream file =new FileInputStream(System.getProperty("user.dir")+"/testdata/selenium.xlsx");
+		
+		XSSFWorkbook workbook =new XSSFWorkbook(file);
+		
+		XSSFSheet sheet =workbook.getSheet("WorkOut");
+		
+		int totalnumberofrows=sheet.getLastRowNum();
+		
+		int totalnumberofcells=sheet.getRow(1).getLastCellNum();
+		
+		System.out.println("Total Rows::"+totalnumberofrows);
+		System.out.println("Total Cells::"+totalnumberofcells);
+	}
+
+}
